@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/styles/m-styles.css">
+    <link rel="stylesheet" type="text/css" href="static/fonts/m-fonts.css">
+    <script src="static/js/m-script.js"></script>
+    <link rel="website icon" type="png" href="static/img/M1/weblogo.png">
+    <title>Portfolio</title>
+</head>
+
+
+<body>
+
+<div class="menu">
+    <div class="logo">
+        <a href="m-1-index.html">
+            <img src="static/img/M1/logo2.png" alt="Logo" />
+        </a>
+    </div>
+    <div class="center-sections">
+        <div class="section">
+            <a href="m-1-index.html">Home</a>
+        </div>
+        <div class="section">
+            <a href="m-2-about.html">About</a>
+        </div>
+        <div class="section">
+            <a class="active" href="m-3-contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="right-sections">
+        <div class="section">
+            <a href="https://www.instagram.com/_sasha_ovchinnikov__/">
+                <img src="static/img/M1/instagram.png" alt="instagram" />
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://discordapp.com/users/567279209614016512/">
+                <img src="static/img/M1/discord.png" alt="discord" />
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://open.spotify.com/user/31kzrpq2zah2gsth4todcgkzzaiy?si=9f0ae69ef9e24600">
+                <img src="static/img/M1/spotify.webp" alt="spotify" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<div class="contact-section">
+    <div class="contact-content">
+        <form onsubmit="return validateForm()">
+            <div class="contact-item">
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+
+            <div class="contact-item">
+                <input type="email" id="email" name="email" placeholder="Email@example.com" required>
+            </div>
+
+            <div class="contact-item">
+                <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
+            </div>
+
+            <div class="contact-item">
+                <input type="submit" value="Send">
+            </div>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

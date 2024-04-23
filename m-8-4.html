@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/styles/m-styles.css">
+    <link rel="stylesheet" type="text/css" href="static/fonts/m-fonts.css">
+    <script src="static/js/m-script.js"></script>
+    <link rel="website icon" type="png" href="static/img/M1/weblogo.png">
+    <title>Portfolio</title>
+</head>
+
+
+<body>
+
+<div class="menu">
+    <div class="logo">
+        <a href="m-1-index.html">
+            <img src="static/img/M1/logo2.png" alt="Logo" />
+        </a>
+    </div>
+    <div class="center-sections">
+        <div class="section">
+            <a class="active" href="m-1-index.html">Home</a>
+        </div>
+        <div class="section">
+            <a href="m-2-about.html">About</a>
+        </div>
+        <div class="section">
+            <a href="m-3-contact.html">Contact</a>
+        </div>
+    </div>
+    <div class="right-sections">
+        <div class="section">
+            <a href="https://www.instagram.com/_sasha_ovchinnikov__/">
+                <img src="static/img/M1/instagram.png" alt="instagram" />
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://discordapp.com/users/567279209614016512/">
+                <img src="static/img/M1/discord.png" alt="discord" />
+            </a>
+        </div>
+        <div class="section">
+            <a href="https://open.spotify.com/user/31kzrpq2zah2gsth4todcgkzzaiy?si=9f0ae69ef9e24600">
+                <img src="static/img/M1/spotify.webp" alt="spotify" />
+            </a>
+        </div>
+    </div>
+</div>
+
+<info class="info">
+<figure class="figure1">
+    
+    <div class="content-container">
+      <div class="text-container">
+        <p>These photos show four small and easy programs in C++ and C. The first program stores the entered data and analyzes it, the second program calculates the difference between two entered times, the third program checks the year you enter for a leap year, and the last program checks whether the number is prime, for example as 7 or 13.</p>
+      </div>
+
+      <div class="adaptivny-slayder">
+        <input type="radio" name="kadoves2" id="slaid3" checked>
+        <input type="radio" name="kadoves2" id="slaid4">
+        <input type="radio" name="kadoves2" id="slaid5">
+        <input type="radio" name="kadoves2" id="slaid6">
+  
+        <div class="kadoves">
+          <label for="slaid3"></label>
+          <label for="slaid4"></label>
+          <label for="slaid5"></label>
+          <label for="slaid6"></label>
+        </div>
+  
+        <div class="adaptivny-slayder-lasekun">
+          <div class="abusteku-deagulus">
+            <img src="static/img/M1/C++1.png" alt="C1">
+            <img src="static/img/M1/C++2.png" alt="C2">
+            <img src="static/img/M1/C1.png" alt="C3">
+            <img src="static/img/M1/C2.png" alt="C4">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+        <textarea id="hiddenCodeSnippet1" class="hidden-textarea" rows="10" cols="50">
+             #include <iostream>
+                using namespace std;
+                
+                struct student
+                {
+                    char name[50];
+                    int roll;
+                    float marks;
+                } s[10];
+                
+                int main()
+                {
+                    cout << "Enter information of students: " << endl;
+                
+                    for(int i = 0; i < 10; ++i)
+                    {
+                        s[i].roll = i+1;
+                        cout << "For roll number" << s[i].roll << "," << endl;
+                
+                        cout << "Enter name: ";
+                        cin >> s[i].name;
+                
+                        cout << "Enter marks: ";
+                        cin >> s[i].marks;
+                
+                        cout << endl;
+                    }
+                
+                    cout << "Displaying Information: " << endl;
+                
+                    for(int i = 0; i < 10; ++i)
+                    {
+                        cout << "\nRoll number: " << i+1 << endl;
+                        cout << "Name: " << s[i].name << endl;
+                        cout << "Marks: " << s[i].marks << endl;
+                    }
+                
+                    return 0;
+                }
+        </textarea>
+        <button class="copy-button" onclick="copyCode('hiddenCodeSnippet1')">Copy Code 1</button>
+      
+
+        <textarea id="hiddenCodeSnippet2" class="hidden-textarea" rows="10" cols="50">
+            #include <iostream>
+                using namespace std;
+                
+                struct TIME
+                {
+                  int seconds;
+                  int minutes;
+                  int hours;
+                };
+                
+                void computeTimeDifference(struct TIME, struct TIME, struct TIME *);
+                
+                int main()
+                {
+                    struct TIME t1, t2, difference;
+                
+                    cout << "Enter start time." << endl;
+                    cout << "Enter hours, minutes and seconds respectively: ";
+                    cin >> t1.hours >> t1.minutes >> t1.seconds;
+                
+                    cout << "Enter stop time." << endl;
+                    cout << "Enter hours, minutes and seconds respectively: ";
+                    cin >> t2.hours >> t2.minutes >> t2.seconds;
+                
+                    computeTimeDifference(t1, t2, &difference);
+                
+                    cout << endl << "TIME DIFFERENCE: " << t1.hours << ":" << t1.minutes << ":" << t1.seconds;
+                    cout << " - " << t2.hours << ":" << t2.minutes << ":" << t2.seconds;
+                    cout << " = " << difference.hours << ":" << difference.minutes << ":" << difference.seconds;
+                    return 0;
+                }
+                void computeTimeDifference(struct TIME t1, struct TIME t2, struct TIME *difference){
+                    
+                    if(t2.seconds > t1.seconds)
+                    {
+                        --t1.minutes;
+                        t1.seconds += 60;
+                    }
+                
+                    difference->seconds = t1.seconds - t2.seconds;
+                    if(t2.minutes > t1.minutes)
+                    {
+                        --t1.hours;
+                        t1.minutes += 60;
+                    }
+                    difference->minutes = t1.minutes-t2.minutes;
+                    difference->hours = t1.hours-t2.hours;
+                }
+        </textarea>
+        <button class="copy-button" onclick="copyCode('hiddenCodeSnippet2')">Copy Code 2</button>
+      
+
+        <textarea id="hiddenCodeSnippet3" class="hidden-textarea" rows="10" cols="50">
+            #include <stdio.h>
+                int main() {
+                   int year;
+                   printf("Enter a year: ");
+                   scanf("%d", &year);
+                
+                   if (year % 400 == 0) {
+                      printf("%d is a leap year.", year);
+                   }
+                  
+                   else if (year % 100 == 0) {
+                      printf("%d is not a leap year.", year);
+                   }
+                  
+                   else if (year % 4 == 0) {
+                      printf("%d is a leap year.", year);
+                   }
+
+                   else {
+                      printf("%d is not a leap year.", year);
+                   }
+                
+                   return 0;
+                }
+        </textarea>
+        <button class="copy-button" onclick="copyCode('hiddenCodeSnippet3')">Copy Code 3</button>
+      
+
+        <textarea id="hiddenCodeSnippet4" class="hidden-textarea" rows="10" cols="50">
+            #include <stdio.h>
+
+                int main() {
+                
+                  int n, i, flag = 0;
+                  printf("Enter a positive integer: ");
+                  scanf("%d", &n);
+                
+                  if (n == 0 || n == 1)
+                    flag = 1;
+                
+                  for (i = 2; i <= n / 2; ++i) {
+                
+                    if (n % i == 0) {
+                      flag = 1;
+                      break;
+                    }
+                  }
+                
+                  if (flag == 0)
+                    printf("%d is a prime number.", n);
+                  else
+                    printf("%d is not a prime number.", n);
+                
+                  return 0;
+                }
+        </textarea>
+        <button class="copy-button" onclick="copyCode('hiddenCodeSnippet4')">Copy Code 4</button>
+
+
+    </div>
+
+  </figure>
+</info>
+
+
+
+
+
+
+
+
+</body>
+</html>
