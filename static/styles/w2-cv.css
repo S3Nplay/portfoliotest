@@ -1,0 +1,264 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	color: #333333;
+	background:#808080 url('https://groupnptc-my.sharepoint.com/personal/337385_nptcgroup_ac_uk/Documents/!2023-24/Unit%2013/project/static/img/coruscant4.jpg?Web=1') repeat-x fixed center 100px;
+}
+
+#container {
+	background: yellow;
+	width: 900px;
+	margin-top: 52px;
+	margin-bottom: 21px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 21px;
+	background: black url('https://groupnptc-my.sharepoint.com/personal/337385_nptcgroup_ac_uk/Documents/!2023-24/Unit%2013/project/static/img/DarthVader.jpg?Web=1') no-repeat top right;
+	border-top-right-radius: 28px 28px;
+	border-bottom-left-radius: 28px 28px;
+}
+
+#page {
+	width: 300px;
+	background: #333;
+	padding:21px 21px 35px 21px;
+	color: white;
+	border-top-right-radius: 28px 28px;
+	border-bottom-left-radius: 28px 28px;
+	opacity:0.9;
+	filter: alpha(opacity=90);
+}
+
+#page.wide{
+	width: 600px;
+}
+
+
+#page.widest{
+	width: 858px;
+}
+
+p,h2,h3,h4,nav, table, caption{
+	margin-bottom:21px;
+}
+
+h2{
+	font-size:20px;
+	color:white;
+	border-bottom:2px solid #76acdb;
+	padding-bottom:3px;
+	clear:left;
+	margin-top:21px
+}
+
+h3{
+	font-size:18px;
+	color:white;
+	border-bottom:2px solid #76acdb;
+	padding-bottom:3px;
+	clear:left;
+}
+
+h4, caption{
+	font-size: 14px;
+	color:white;
+	font-weight: bold;
+	border-bottom:2px solid #76acdb;
+	padding-bottom:3px;
+	clear:left;
+}
+
+figure{
+	margin:0;
+	padding:0;
+}
+
+Footer{
+	margin-top:21px;
+	font-size:9px;
+	clear:left;
+}
+
+ul {
+	list-style: circle outside;
+	margin-bottom: 21px;
+}
+
+ol {
+	list-style: decimal outside;
+	margin-bottom: 21px;
+}
+
+li {
+	margin: 0 0 3px 21px;
+}
+
+nav {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 23px;
+	background: #333;
+	padding: 10px 0 1px 0;
+	box-shadow: 0 3px 3px black;
+}
+
+nav li {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+
+a {
+	font-weight: bold;
+	color: white;
+}
+
+nav a {
+	padding: 2px 17px 3px 7px;
+	background: transparent ;
+	text-decoration: none;
+}
+
+nav ul {
+	display: block;
+	width: 900px;
+	margin: 0 auto;
+	list-style: none;
+	padding: 0;
+}
+
+table{
+	width: 100%;
+}
+
+th{
+	width: 33%;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: left;
+	color: white;
+	padding: 4px;
+	background: #222;
+	vertical-align: bottom;
+}
+
+td{
+	font-weight: normal;
+	font-size: 12px;
+	vertical-align: middle;
+	color: white;
+	padding: 4px;
+}
+
+tr.evenrow td{
+	background: #222;
+}
+
+ul.gallery{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+ul.gallery li{
+	margin:0 14px 14px 0;
+	padding: 0 7px 0 0;
+	float: left;
+}
+
+figcaption{
+	padding-top: 4px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+.caption{
+	padding-top: 4px;
+	font-size: 10px;
+	font-weight: bold;
+}
+
+#contactdetails {
+	margin-bottom: 14px;
+	font-size: 17px;
+}
+
+#contactdetails strong{
+	font-weight: bold;
+}
+
+#mailform div.controlgroup{
+	margin: 14px 0 21px 0;
+}
+
+#mailform label {
+	display: block;
+	padding: 0 0 3px 0;
+	margin: 0 0 3px 0;
+	border-bottom: 1px solid #76acdb;
+}
+
+#mailform input.stdtext{
+	width: 294px;
+	border: 0;
+	color: #340aee;
+	padding: 3px;
+	text-emphasis-style: bold;
+}
+
+#mailform textarea{
+	width: 294px;
+	height: 84px;
+	resize: none;
+	border: 0;
+	color: #340aee;
+	padding: 3px;
+	text-emphasis-style: bold;
+}
+
+#mailform span.radiocaption {
+	font-size: 11px;
+	font-weight: bold;
+}
+
+#mailform input[type="radio"]{
+	margin: 6px 14px 0 0;
+}
+
+#mailform input[type="submit"], #mailform input[type="reset"] {
+	border: 0;
+	color: white;
+	font-weight: bold;
+	text-transform: lowercase;
+	padding: 6px 17px 8px 7px;
+	background: #3e93de;
+	box-shadow: 3px 4px 3px #111111;
+}
+
+#mailform input[type="submit"] {
+	border-bottom-left-radius: 7px 7px;
+}
+
+#mailform input[type="reset"] {
+	border-top-right-radius: 7px 7px;
+}
+
+li.active a {
+	color: lightskyblue;
+	font-weight: bold;
+}
+
+li a {
+	color: white;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 0.9em;
+	padding: 0 10px;
+	transition: color 0.3s;
+}
+
+li:not(.active):hover a{
+	color: lightskyblue;
+}

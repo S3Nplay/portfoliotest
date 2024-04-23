@@ -1,0 +1,563 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: black;
+  color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5%;
+  z-index: 1000;
+  border-bottom: 1px solid #ffffff;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.logo a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.logo img {
+  width: 50px;
+}
+
+.center-sections,
+.right-sections {
+  display: flex;
+  margin-right: 15px;
+  
+}
+
+.section {
+  margin: 0 15px;
+}
+
+.center-sections {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.section a {
+  text-decoration: none;
+  color: rgb(155, 155, 155);
+  position: relative;
+  transition: color 0.3s, left 0.3s ease-out;
+}
+
+.section a:hover {
+  color: white;
+}
+
+.section a.active {
+  color: white;
+}
+
+.section a.active::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(255, 255, 255);
+  bottom: -5px;
+  transition: transform 0.3s ease-out; 
+}
+
+.section img {
+  width: 20px;
+  vertical-align: middle;
+}   
+
+.figure1 {
+  position: relative; 
+  top: auto;
+  left: auto;
+  right: auto; 
+  bottom: auto;
+  border: 2px solid white;
+  background-color: black;
+  border-radius: 10px;
+  color: #fff;
+  width: 80%;
+  margin: 6% auto;
+  padding-bottom: 3%;
+}
+
+.banner {
+  position: relative;
+  left: 5%;
+  width: 30%;
+  height: 20%;
+  border: 2px solid rgb(251, 251, 251);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  color: white;
+  overflow: hidden;
+  margin-top: 1.5%;
+}
+
+.banner img {
+  display: block;
+  width: 100%; 
+  height: 100px;
+  border-radius: 5%;
+  object-fit: cover;
+}
+
+.banner figcaption {
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 20px; 
+  color: #fff; 
+  font-size: 18px;  
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5;
+  width: 100%;
+}
+
+.banner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  margin: 0;
+  padding: 10px; 
+  color: white; 
+  background-color: transparent;
+  z-index: 1;
+}
+
+.banner::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+}
+
+.figure2 {
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  width: 30%;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.figure2 img {
+  width: 50%;
+  height: auto; 
+  margin-bottom: 10px;
+  border-radius: 5%;
+  border: 3px solid rgb(251, 251, 251);
+}
+
+.figure2 figcaption {
+  margin-bottom: 35px;
+}
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.contact-content {
+  width: 60%;
+  text-align: center;
+}
+
+.contact-item {
+  margin-bottom: 5%;
+  text-align: left;
+  width: 100%;
+  margin-left: 0;
+}
+
+.contact-item:not(:last-child) {
+  margin-bottom: 5%;
+}
+
+.contact-item input,
+.contact-item textarea {
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1.6rem;
+  width: calc(100% - 2px);
+}
+
+.contact-item textarea {
+  resize: none;
+}
+
+.contact-item input[type="submit"] {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  will-change: transform;
+  transition: transform 0.4s, background-color 0.4s, color 0.4s;
+}
+
+.contact-item input[type="submit"].submitted {
+  transform: scale(1); 
+}
+
+.contact-item input[type="submit"]:hover,
+.contact-item input[type="submit"]:focus {
+  transform: scale(1.04);
+}
+
+.white-button {
+  background-color: #fff;
+  border: 2px solid #333;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #333;
+  border-radius: 10px;
+  transition-duration: 0.4s;
+} 
+
+.white-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8%;
+  max-width: 95%; 
+  max-height: 400px; 
+  margin: 0 auto;
+  margin-left: 5%;
+}
+
+.text-container {
+  color: white;
+  margin: 0;
+}
+
+.image-container {
+  width: 60%;
+  height: auto;
+  display: flex; 
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 45px; 
+  object-fit: cover;
+  margin: 0;
+  padding-top: 5%;
+  margin-left: 20px;
+}
+
+.cv-container {
+  text-align: center;
+  margin-top: 3%;
+}
+
+.cv-button {
+  background-color: white;
+  border: 2px solid #333;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition-duration: 0.4s;
+}
+
+.cv-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.image-container img {
+  width: 40%; 
+  height: auto;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.containercv {
+  position: relative;
+  margin: 6% 25%;
+  padding: 20px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+}
+
+.download-button {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.download-button:hover {
+  background-color: #f6f6f6;
+  color: rgb(0, 0, 0);
+  border: 2px solid #333;
+}
+
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1% 5% ;
+}
+
+.adaptivny-slayder {
+  position: relative;
+  max-width: 40%;
+  margin: 0 auto;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.75);
+}
+
+.adaptivny-slayder input[name="kadoves1"],
+.adaptivny-slayder input[name="kadoves2"],
+.adaptivny-slayder input[name="kadoves3"] {
+  display: none;
+}
+
+.kadoves {
+  position: absolute;
+  left: 0;
+  bottom: -40px;
+  text-align: center;
+  width: 100%;
+}
+
+.kadoves label {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  margin: 0 3px;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, .8);
+  border-radius: 50%;
+  border: 5px solid #2f363c;
+  background-color: #738290;
+}
+
+#slaid1:checked~.kadoves label[for="slaid1"],
+#slaid2:checked~.kadoves label[for="slaid2"]{
+  background-color: white;
+}
+
+#slaid3:checked~.kadoves label[for="slaid3"],
+#slaid4:checked~.kadoves label[for="slaid4"],
+#slaid5:checked~.kadoves label[for="slaid5"],
+#slaid6:checked~.kadoves label[for="slaid6"]{
+  background-color: white;
+}
+
+#slaid7:checked~.kadoves label[for="slaid7"],
+#slaid8:checked~.kadoves label[for="slaid8"],
+#slaid9:checked~.kadoves label[for="slaid9"],
+#slaid10:checked~.kadoves label[for="slaid10"],
+#slaid11:checked~.kadoves label[for="slaid11"],
+#slaid12:checked~.kadoves label[for="slaid12"],
+#slaid13:checked~.kadoves label[for="slaid13"]{
+  background-color: white;
+}
+
+.adaptivny-slayder-lasekun {
+  overflow: hidden;
+}
+
+.abusteku-deagulus {
+  display: flex;
+  transition: all 0.5s;
+}
+
+.abusteku-deagulus img {
+  width: 100%;
+  flex-shrink: 0;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+#slaid1:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translate(0);
+}
+
+#slaid2:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-100%);
+}
+
+#slaid3:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(0);
+}
+
+#slaid4:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-100%);
+}
+
+#slaid5:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-200%);
+}
+
+#slaid6:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-300%);
+}
+
+#slaid7:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(0);
+}
+
+#slaid8:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-100%);
+}
+
+#slaid9:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-200%);
+}
+
+#slaid10:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-300%);
+}
+
+#slaid11:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-400%);
+}
+
+#slaid12:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-500%);
+}
+
+#slaid13:checked~.adaptivny-slayder-lasekun .abusteku-deagulus {
+  transform: translateX(-600%);
+}
+
+.text-container {
+  width: 45%; 
+  padding: 20px;
+}
+
+.project-title {
+  text-align: center;
+  padding: 10px;
+}
+
+.project-title h1 {
+  color: white;
+}
+
+.project-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+  margin-top: 20px;
+}
+
+.project {
+  width: 45%;
+}
+
+.content {
+  text-align: center;
+}
+
+.left-content img {
+  width: 95%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.right-content {
+  text-align: center;
+}
+
+button {
+  background-color: white;
+  border: 2px solid #333;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.copy-button {
+  background-color: white;
+  border: 2px solid #333;
+  color: #333;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 4%;
+  transition-duration: 0.4s;
+}
+
+.copy-button:hover {
+  background-color: #333;
+  color: white;
+}
+
+.hidden-textarea {
+  position: absolute;
+  left: -9999px;
+}
+
+.upload-button {
+  background-color: white;
+  border: 2px solid #333;
+  color: #333;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition-duration: 0.4s;
+  margin-left: 15%;
+}
+
+.upload-button:hover {
+  background-color: #333;
+  color: white;
+}

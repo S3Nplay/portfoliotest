@@ -1,0 +1,37 @@
+@font-face {
+    font-family: 'Bungee';
+    src: url('Bungee-Regular.ttf') format('truetype');
+    font-weight: 100; 
+    font-style: normal;
+}
+
+.menu {
+    font-family: 'Bungee', sans-serif;
+    font-size: 15px;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'Quando';
+    src: url('Quando-Regular.ttf') format('truetype');
+    font-weight: 100; 
+    font-style: normal;
+}
+
+.info {
+    font-family: 'Quando', sans-serif;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: 'DaysOne';
+    src: url('DaysOne-Regular.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+} 
+
+.bunner {
+    font-family: 'DaysOne', Arial;
+}
+
